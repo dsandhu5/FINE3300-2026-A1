@@ -28,6 +28,4 @@ to_currency = input("Convert to (USD or CAD): ")
 
 # initialize converter and perform conversion
 converter = ExchangeRates("BankOfCanadaExchangeRate.2026.csv")
-result = converter.convert(amount, from_currency, to_currency)
-print(result)
-print(f"${result:,.2f} {to_currency}")
+print("${:,.2f} {}".format(converter.convert(amount, from_currency, to_currency), to_currency))
